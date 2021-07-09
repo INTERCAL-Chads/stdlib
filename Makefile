@@ -15,7 +15,11 @@ bin/sub: bin/ sub.i
 	$(CC) sub.i
 	mv sub bin/sub
 
-.PHONY: clean build run-add run-complement run-sub
+bin/mult: bin/ mult.i
+	$(CC) mult.i
+	mv mult bin/mult
+
+.PHONY: clean build run-add run-complement run-sub run-mult
 
 clean:
 	rm -r bin
@@ -30,3 +34,6 @@ run-complement: bin/complement
 
 run-sub: bin/sub
 	./bin/sub
+
+run-mult: bin/mult
+	./bin/mult
