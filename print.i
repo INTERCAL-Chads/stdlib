@@ -1,3 +1,25 @@
+        DO .1 <- #15
+        DO ,1 <- .1
+        DO ,1 SUB #1 <- #73
+        DO ,1 SUB #2 <- #78
+        DO ,1 SUB #3 <- #84
+        DO ,1 SUB #4 <- #69
+        DO ,1 SUB #5 <- #82
+        DO ,1 SUB #6 <- #67
+        DO ,1 SUB #7 <- #65
+        DO ,1 SUB #8 <- #76
+        DO ,1 SUB #9 <- #45
+        DO ,1 SUB #10 <- #67
+        DO ,1 SUB #11 <- #104
+        DO ,1 SUB #12 <- #97
+        DO ,1 SUB #13 <- #100
+        DO ,1 SUB #14 <- #115
+        DO ,1 SUB #15 <- #10
+        DO (2010) NEXT
+        PLEASE GIVE UP
+
+
+        PLEASE NOTE THE FOLLOWING IS COPIED FROM `stdlib.i`
         PLEASE KNOCK BEFORE ENTERING (TRIED TO ENTER CUSTOM STDLIB AS NORMAL EXECUTION, NOT FUNCTION CALL)
         DO NOTE THE FIRST LINE IS A SYNTAX ERROR TO PREVENT PROGRAMS FROM ENTERING AND EXECUTING THE STANDARD LIBRARY AS CODE
         DO NOTE: INTERCAL CUSTOM STDLIB
@@ -299,7 +321,7 @@
         PLEASE DO RESUME #1
 
 
-(2010)  DO NOTE THIS IS THE PRINT FUNCTION. IT TAKES ,1 AS AN ARRAY OF ASCII CODES AND .1 AS THE LENGTH OF THAT ARRAY. RESERVES THE VARIABLE .2010 FOR ANY FUTURE CALLS
+(2010)  DO NOTE THIS IS THE PRINT FUNCTION. IT TAKES ,1 AS AN ARRAY OF ASCII CODES AND .1 AS THE LENGTH OF THAT ARRAY. RESERVES THE VARIABLE .1001 FOR ANY FUTURE CALLS
         PLEASE DO STASH ,1 + .1 + .2 + .3 + .4 + .5 + .6 + .7 + .8 + .9 + .10 + .11 + .16
         DO .3 <- .1
         DO .1 <- #0
@@ -315,14 +337,14 @@
         DO RETRIEVE .1 + .2
         DO STASH .1 + .2
         DO .6 <- .1
-        DO .1 <- .2010
+        DO .1 <- .1001
         DO .2 <- ,1 SUB .6
         DO (2002) NEXT
         DO ,1 SUB .6 <- .1 ~ #255
         DO .2 <- ,1 SUB .6
-        DO .1 <- .2010
+        DO .1 <- .1001
         PLEASE DO (2002) NEXT
-        DO .2010 <- .1
+        DO .1001 <- .1
         DO RETRIEVE .1 + .2
         DO STASH .1 + .2
         DO .2 <- .3
@@ -351,7 +373,7 @@
         DO RESUME #1
 
 
-(2051)  DO NOTE THIS IS THE INEQUALITY FUNCTION. IT TAKES .1 AND .2 AND STORES #0 IN .1 IF .1 != .2; OTHERWISE STORES #1
+(2051)  DO NOTE THIS IS THE INEQUALITY FUNCTION. IT TAKES .1 AND .2 AND STORES #0 IN .1 IF .1 == .2; OTHERWISE STORES #1
         DO (2050) NEXT
         DO .1 <- ''?.1 $ #65535' ~ '#0 $ #65535'' ~ #1
         DO RESUME #1
